@@ -37,4 +37,6 @@ Improvements:
 
 7.  Can show detail page as well for each planet.
 
+8.  Can have app and server side caching mechanism.
+
 
