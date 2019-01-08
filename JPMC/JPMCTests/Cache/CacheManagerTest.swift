@@ -11,12 +11,17 @@ import XCTest
 
 class CacheManagerTest: XCTestCase {
     
+    var cacheManager : CacheManager!
+    
     override func setUp() {
         super.setUp()
+        cacheManager = CacheManager.sharedInstance
+        cacheManager.dataSource = MockDataSource()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
+        cacheManager = nil
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
@@ -31,7 +36,7 @@ class CacheManagerTest: XCTestCase {
         let promise = expectation(description: "Completion handler invoked")
         var dataVal : Any?
         
-        CacheManager.sharedInstance.getData(forKey: WebEngineConstant.planetAPI) { (data) in
+        cacheManager.getData(forKey: WebEngineConstant.planetAPI) { (data) in
             dataVal = data
             promise.fulfill()
         }
@@ -54,7 +59,7 @@ class CacheManagerTest: XCTestCase {
         var dataStatus = false
         
         let jsonObject = self.getJSONObject(fromFile: "PlanetDataList") as Any
-        CacheManager.sharedInstance.saveData(withData: jsonObject, forKey: WebEngineConstant.planetAPI) { (status) in
+        cacheManager.saveData(withData: jsonObject, forKey: WebEngineConstant.planetAPI) { (status) in
             dataStatus = status
             promise.fulfill()
         }
@@ -83,5 +88,43 @@ class CacheManagerTest: XCTestCase {
             return nil
         }
     }
+}
+
+class MockDataSource: CoreDataAccessorProtocol {
+    lazy var jsonObject = self.getJSONObject(fromFile: "PlanetDataList") as Any
+    lazy var dataInfo = [WebEngineConstant.planetAPI : jsonObject]
     
+    func getData(forPath path : String, withCompletion completion : @escaping (Any?) -> Void) {
+        completion(dataInfo[path])
+    }
+    
+    func saveData(withData data : Any, forPath path : String, withCompletion completion : @escaping (Bool) -> Void) {
+        dataInfo[path] = data
+        completion(true)
+    }
+    
+    func updateData(withData data : Any, forPath path : String, withCompletion completion : @escaping (Bool) -> Void) {
+        dataInfo[path] = data
+        completion(true)
+    }
+    
+    private func getJSONObject(fromFile fileName : String) -> [AnyHashable : Any]? {
+        guard let pathURL = Bundle(for: type(of: self)).url(forResource: fileName, withExtension: "json") else {
+            return nil
+        }
+        
+        do {
+            let data = try Data(contentsOf: pathURL, options: .mappedIfSafe)
+            let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
+            if let jsonResult = jsonResult as? [AnyHashable : Any] {
+                return jsonResult
+            }
+            else {
+                return nil
+            }
+        } catch {
+            // handle error
+            return nil
+        }
+    }
 }

@@ -16,3 +16,9 @@ protocol CoreDataStackProtocol {
     var momFileName : String { get }
     func initializeCoreDataStack(withCompletion completion : ((Bool) -> Void)?)
 }
+
+protocol CoreDataAccessorProtocol {
+    func getData(forPath path : String, withCompletion completion : @escaping (Any?) -> Void)
+    func saveData(withData data : Any, forPath path : String, withCompletion completion : @escaping (Bool) -> Void)
+    func updateData(withData data : Any, forPath path : String, withCompletion completion : @escaping (Bool) -> Void)
+}

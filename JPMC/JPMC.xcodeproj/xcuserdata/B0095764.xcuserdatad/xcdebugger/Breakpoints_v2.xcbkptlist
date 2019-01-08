@@ -9,29 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "JPMC/CoreData/CoreDataManager/CoreDataManager.swift"
-            timestampString = "568650312.859894"
+            filePath = "JPMC/Planets/View/Controller/ViewController.swift"
+            timestampString = "568653523.431088"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
-            landmarkName = "updateData(withData:forPath:withCompletion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JPMC/CoreData/CoreDataManager/CoreDataManager.swift"
-            timestampString = "568650312.8609329"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
-            landmarkName = "updateData(withData:forPath:withCompletion:)"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "fetchTableDataAndDisplay(notification:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

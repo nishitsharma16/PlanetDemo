@@ -88,7 +88,7 @@ final class CoreDataManager : CoreDataStackProtocol {
 
 // Data Caching
 
-extension CoreDataManager {
+extension CoreDataManager : CoreDataAccessorProtocol {
     
     /**
      This method will be used for getting data for a particular key.

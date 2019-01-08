@@ -12,6 +12,7 @@ final class CacheManager : CacheProtocol {
     
     static let sharedInstance = CacheManager()
     private var memCacheInfo = [String : Any]()
+    var dataSource : CoreDataAccessorProtocol = CoreDataManager.sharedInstance
     
     private init() {
     }
@@ -29,7 +30,7 @@ final class CacheManager : CacheProtocol {
             return
         }
         
-        CoreDataManager.sharedInstance.getData(forPath: key) { [weak self] (data) in
+        dataSource.getData(forPath: key) { [weak self] (data) in
             if let dataVal = data {
                 self?.memCacheInfo[key] = dataVal
                 completion(dataVal)
@@ -52,10 +53,10 @@ final class CacheManager : CacheProtocol {
         let keys = memCacheInfo.keys
         if keys.contains(key) {
             memCacheInfo[key] = data
-            CoreDataManager.sharedInstance.updateData(withData: data, forPath: key, withCompletion: completion)
+            dataSource.updateData(withData: data, forPath: key, withCompletion: completion)
         }
         else {
-            CoreDataManager.sharedInstance.saveData(withData: data, forPath: key, withCompletion: completion)
+            dataSource.saveData(withData: data, forPath: key, withCompletion: completion)
         }
     }
 }
