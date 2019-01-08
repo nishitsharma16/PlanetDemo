@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ This Protocol is to provide requirements for making any object as Core Data Manager.
+ */
+
 protocol CoreDataStackProtocol {
     var momFileName : String { get }
     func initializeCoreDataStack(withCompletion completion : ((Bool) -> Void)?)

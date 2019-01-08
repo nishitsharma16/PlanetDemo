@@ -10,6 +10,11 @@ import Foundation
 
 class PlanetManager {
     
+    /**
+     This method will be used for fetching planet data from "https://swapi.co/api/planets/" API end point.
+     - Parameter completion: completion is the callback once data is fetched.
+     */
+    
     static func getPlanetData(withCompletion completion : @escaping ([Planet]?, DataError?) -> Void) {
         WebServiceManager.sharedInstance.createDataRequest(withPath: WebEngineConstant.planetAPI, withParam: nil, withCustomHeader: nil, withRequestType: .GET) { (data, error) in
             

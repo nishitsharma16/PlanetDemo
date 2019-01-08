@@ -12,7 +12,6 @@
 		8ACAD1D521E3CEBD002A2781 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ACAD1D321E3CEBD002A2781 /* Main.storyboard */; };
 		8ACAD1D721E3CEBF002A2781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ACAD1D621E3CEBF002A2781 /* Assets.xcassets */; };
 		8ACAD1DA21E3CEBF002A2781 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ACAD1D821E3CEBF002A2781 /* LaunchScreen.storyboard */; };
-		8ACAD1E521E3CEBF002A2781 /* JPMCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACAD1E421E3CEBF002A2781 /* JPMCTests.swift */; };
 		8ACAD1F621E3D516002A2781 /* PlanetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACAD1F521E3D516002A2781 /* PlanetViewModel.swift */; };
 		8ACAD1F821E3D534002A2781 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACAD1F721E3D534002A2781 /* Planet.swift */; };
 		8ACAD1FB21E3D56C002A2781 /* PlanetViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACAD1F921E3D56C002A2781 /* PlanetViewCell.swift */; };
@@ -32,6 +31,13 @@
 		8ACAD22821E4152D002A2781 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACAD22721E4152D002A2781 /* CacheManager.swift */; };
 		8ACAD22C21E415A4002A2781 /* CacheProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACAD22B21E415A4002A2781 /* CacheProtocol.swift */; };
 		8ACAD22F21E423B7002A2781 /* CellUpdateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACAD22E21E423B7002A2781 /* CellUpdateProtocol.swift */; };
+		8ADAD31721E46B6200631183 /* PlanetModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADAD31621E46B6200631183 /* PlanetModelTest.swift */; };
+		8ADAD31A21E46BEC00631183 /* PlanetViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADAD31921E46BEC00631183 /* PlanetViewModelTest.swift */; };
+		8ADAD31D21E46D7F00631183 /* CoreDataManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADAD31C21E46D7F00631183 /* CoreDataManagerTest.swift */; };
+		8ADAD32021E46DB800631183 /* WebServiceManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADAD31F21E46DB800631183 /* WebServiceManagerTest.swift */; };
+		8ADAD32221E46E4C00631183 /* PlanetData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8ADAD32121E46E4C00631183 /* PlanetData.json */; };
+		8ADAD32421E4982B00631183 /* PlanetDataList.json in Resources */ = {isa = PBXBuildFile; fileRef = 8ADAD32321E4982A00631183 /* PlanetDataList.json */; };
+		8ADAD32721E49D7200631183 /* CacheManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADAD32621E49D7200631183 /* CacheManagerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +59,6 @@
 		8ACAD1D921E3CEBF002A2781 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8ACAD1DB21E3CEBF002A2781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8ACAD1E021E3CEBF002A2781 /* JPMCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JPMCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8ACAD1E421E3CEBF002A2781 /* JPMCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JPMCTests.swift; sourceTree = "<group>"; };
 		8ACAD1E621E3CEBF002A2781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8ACAD1F521E3D516002A2781 /* PlanetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetViewModel.swift; sourceTree = "<group>"; };
 		8ACAD1F721E3D534002A2781 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
@@ -75,6 +80,13 @@
 		8ACAD22B21E415A4002A2781 /* CacheProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheProtocol.swift; sourceTree = "<group>"; };
 		8ACAD22E21E423B7002A2781 /* CellUpdateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellUpdateProtocol.swift; sourceTree = "<group>"; };
 		8ACAD23021E42578002A2781 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8ADAD31621E46B6200631183 /* PlanetModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetModelTest.swift; sourceTree = "<group>"; };
+		8ADAD31921E46BEC00631183 /* PlanetViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetViewModelTest.swift; sourceTree = "<group>"; };
+		8ADAD31C21E46D7F00631183 /* CoreDataManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerTest.swift; sourceTree = "<group>"; };
+		8ADAD31F21E46DB800631183 /* WebServiceManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceManagerTest.swift; sourceTree = "<group>"; };
+		8ADAD32121E46E4C00631183 /* PlanetData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PlanetData.json; sourceTree = "<group>"; };
+		8ADAD32321E4982A00631183 /* PlanetDataList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PlanetDataList.json; sourceTree = "<group>"; };
+		8ADAD32621E49D7200631183 /* CacheManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManagerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +148,11 @@
 		8ACAD1E321E3CEBF002A2781 /* JPMCTests */ = {
 			isa = PBXGroup;
 			children = (
-				8ACAD1E421E3CEBF002A2781 /* JPMCTests.swift */,
+				8ADAD32521E49D4200631183 /* Cache */,
+				8ADAD31E21E46D8A00631183 /* WebEngine */,
+				8ADAD31B21E46D5D00631183 /* CoreDB */,
+				8ADAD31821E46BCB00631183 /* PlanetViewModel */,
+				8ADAD31521E46B4E00631183 /* PlanetModel */,
 				8ACAD1E621E3CEBF002A2781 /* Info.plist */,
 			);
 			path = JPMCTests;
@@ -339,6 +355,48 @@
 			path = CellProtocol;
 			sourceTree = "<group>";
 		};
+		8ADAD31521E46B4E00631183 /* PlanetModel */ = {
+			isa = PBXGroup;
+			children = (
+				8ADAD32121E46E4C00631183 /* PlanetData.json */,
+				8ADAD31621E46B6200631183 /* PlanetModelTest.swift */,
+			);
+			path = PlanetModel;
+			sourceTree = "<group>";
+		};
+		8ADAD31821E46BCB00631183 /* PlanetViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8ADAD31921E46BEC00631183 /* PlanetViewModelTest.swift */,
+			);
+			path = PlanetViewModel;
+			sourceTree = "<group>";
+		};
+		8ADAD31B21E46D5D00631183 /* CoreDB */ = {
+			isa = PBXGroup;
+			children = (
+				8ADAD32321E4982A00631183 /* PlanetDataList.json */,
+				8ADAD31C21E46D7F00631183 /* CoreDataManagerTest.swift */,
+			);
+			path = CoreDB;
+			sourceTree = "<group>";
+		};
+		8ADAD31E21E46D8A00631183 /* WebEngine */ = {
+			isa = PBXGroup;
+			children = (
+				8ADAD31F21E46DB800631183 /* WebServiceManagerTest.swift */,
+			);
+			path = WebEngine;
+			sourceTree = "<group>";
+		};
+		8ADAD32521E49D4200631183 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				8ADAD32621E49D7200631183 /* CacheManagerTest.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -431,6 +489,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ADAD32221E46E4C00631183 /* PlanetData.json in Resources */,
+				8ADAD32421E4982B00631183 /* PlanetDataList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,7 +528,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8ACAD1E521E3CEBF002A2781 /* JPMCTests.swift in Sources */,
+				8ADAD32021E46DB800631183 /* WebServiceManagerTest.swift in Sources */,
+				8ADAD32721E49D7200631183 /* CacheManagerTest.swift in Sources */,
+				8ADAD31721E46B6200631183 /* PlanetModelTest.swift in Sources */,
+				8ADAD31D21E46D7F00631183 /* CoreDataManagerTest.swift in Sources */,
+				8ADAD31A21E46BEC00631183 /* PlanetViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

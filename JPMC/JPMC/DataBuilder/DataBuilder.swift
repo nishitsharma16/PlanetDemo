@@ -8,7 +8,17 @@
 
 import Foundation
 
+/**
+ This Type is to used for data parser for objects which are conforming to DataInitializer protocol.
+ */
+
 struct DataBuilder<DataElement : DataInitializer> {
+    
+    /**
+     This method will be used for parsing application data objects from JSON object. And it's a generic method which will parse data and return list of DataElement if DataElement has conforms to DataInitializer protocol.
+     - Parameter jsonList: jsonList is JSON object to parse.
+     - Returns: returnvalue List of Generic Element which conforms to DataInitializer protocol.
+     */
     
     func getParsedDataList(withData jsonList : [Any]?) -> [DataElement]? {
         if let dataList = jsonList {
@@ -20,14 +30,6 @@ struct DataBuilder<DataElement : DataInitializer> {
                 }
             }
             return list
-        }
-        return nil
-    }
-    
-    func getParsedData(withData dataObject : [AnyHashable : Any]?) -> DataElement? {
-        if let object = dataObject {
-            let dataObject = DataElement(withData: object)
-            return dataObject
         }
         return nil
     }

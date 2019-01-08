@@ -19,16 +19,17 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="76.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WA8-VP-PQW">
-                        <rect key="frame" x="16" y="28" width="288" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WA8-VP-PQW">
+                        <rect key="frame" x="16" y="11" width="288" height="55"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="WA8-VP-PQW" secondAttribute="bottom" id="4Fz-j3-Bmp"/>
+                    <constraint firstItem="WA8-VP-PQW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="MZ5-uI-Pwq"/>
                     <constraint firstItem="WA8-VP-PQW" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="lpr-Ob-lwC"/>
-                    <constraint firstItem="WA8-VP-PQW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="n7f-hX-eAO"/>
                     <constraint firstItem="WA8-VP-PQW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="rHe-yN-dJX"/>
                 </constraints>
             </tableViewCellContentView>

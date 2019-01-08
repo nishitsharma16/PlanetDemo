@@ -8,12 +8,20 @@
 
 import Foundation
 
+/**
+ This Type to define different type of requests.
+ */
+
 enum RequestType : String {
     case GET
     case POST
     case PUT
     case DELETE
 }
+
+/**
+ This Type is used for fetching, uploading data from or to any API from the server.
+ */
 
 final class WebServiceManager {
     
@@ -26,6 +34,15 @@ final class WebServiceManager {
 }
 
 extension WebServiceManager : WebEngineDataDownloader {
+    
+    /**
+     This method will be used for creating web request.
+     - Parameter path: path is the end point from which we need to load the data from server.
+     - Parameter param: param is json we need to give as request param.
+     - Parameter headers: headers is the additional headers which are required for URL request.
+     - Parameter type: type is the RequestType (i.e. GET, POST, DELETE, PUT etc.).
+     - Parameter completion: completion is the callback once data is fetched.
+     */
     
     func createDataRequest(withPath path : String, withParam param: [AnyHashable : Any]?, withCustomHeader headers : [String : String]? , withRequestType type : RequestType, withCompletion completion : ((Any?, DataError?) -> Void)?)
     {

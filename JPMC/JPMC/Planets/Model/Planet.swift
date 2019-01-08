@@ -49,6 +49,11 @@ struct Planet : DataInitializer, PlanetAccessor {
         return climate
     }
     
+    /**
+     This method will be used for initializing Planet object from JSON object.
+     - Parameter data: data is the JSON object.
+     */
+    
     init(withData data : [AnyHashable : Any]) {
         terrain = data["terrain"] as? String ?? Constants.noData
         gravity = data["gravity"] as? String ?? Constants.noData

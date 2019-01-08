@@ -23,6 +23,11 @@ class PlanetViewCell: UITableViewCell, CellUpdateProtocol {
         // Configure the view for the selected state
     }
     
+    /**
+     This method will be used for updating tableview cell title label.
+     - Parameter data: data is the object which conforms to PlanetAccessor Protocol and with the title it will update the title text.
+     */
+    
     func updateCell(withData data : PlanetAccessor?) {
         planetTitle.text = data?.planetName
     }

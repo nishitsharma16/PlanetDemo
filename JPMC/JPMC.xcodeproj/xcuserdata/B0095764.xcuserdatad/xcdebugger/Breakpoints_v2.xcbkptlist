@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "JPMC/Planets/ViewModel/PlanetViewModel.swift"
-            timestampString = "568600555.718125"
+            filePath = "JPMCTests/PlanetViewModel/PlanetViewModelTest.swift"
+            timestampString = "568637159.040082"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "getPlanetData(withCompletion:)"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "testGetPlanetData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

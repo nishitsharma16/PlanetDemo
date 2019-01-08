@@ -16,6 +16,12 @@ final class CacheManager : CacheProtocol {
     private init() {
     }
     
+    /**
+     This method will be used for getting data for a particular key.
+     - Parameter key: key is the unique key which will map to saved data.
+     - Parameter completion: completion is the callback once data is fetched.
+     */
+    
     func getData(forKey key : String, withCompletion completion : @escaping (Any?) -> Void) {
         let keys = memCacheInfo.keys
         if keys.contains(key) {
@@ -34,6 +40,13 @@ final class CacheManager : CacheProtocol {
             }
         }
     }
+    
+    /**
+     This method will save data w.r.t. given key value.
+     - Parameter data: data is the data which we need to save in cache.
+     - Parameter key: key is the unique key which will map to data which we are saving.
+     - Parameter completion: completion is the callback once data is saved.
+     */
     
     func saveData(withData data : Any, forKey key : String, withCompletion completion : @escaping (Bool) -> Void) {
         let keys = memCacheInfo.keys

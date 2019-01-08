@@ -20,6 +20,11 @@ final class CoreDataManager : CoreDataStackProtocol {
         
     }
     
+    /**
+     This method will initialize core data stack.
+     - Parameter completion: completion is the callback once core data stack initialized.
+     */
+    
     func initializeCoreDataStack(withCompletion completion : ((Bool) -> Void)?) {
         let bundle = Bundle(for: CoreDataManager.self)
         guard let modelURL = bundle.url(forResource: momFileName, withExtension: "momd") else {
@@ -79,55 +84,17 @@ final class CoreDataManager : CoreDataStackProtocol {
             }
         }
     }
-    
-    func deteleAllObjectsFromDB(withCompletion completion : ((Bool) -> Void)?) {
-        if let privateMOC = self.privateContext {
-            privateMOC.perform {
-                do {
-                    let request = NSFetchRequest<NSManagedObject>(entityName: "ProductCategory")
-                    let results = try privateMOC.fetch(request)
-                    for object in results {
-                        privateMOC.delete(object)
-                    }
-                    self.saveContext(withCompletion: { (saved) in
-                        if saved {
-                            DispatchQueue.main.async {
-                                if let completionHandler = completion {
-                                    completionHandler(true)
-                                }
-                            }
-                        }
-                        else {
-                            DispatchQueue.main.async {
-                                if let completionHandler = completion {
-                                    completionHandler(false)
-                                }
-                            }
-                        }
-                    })
-                }
-                catch {
-                    DispatchQueue.main.async {
-                        if let completionHandler = completion {
-                            completionHandler(false)
-                        }
-                    }
-                }
-            }
-        }
-        else {
-            DispatchQueue.main.async {
-                if let completionHandler = completion {
-                    completionHandler(false)
-                }
-            }
-        }
-    }
 }
 
 // Data Caching
 
 extension CoreDataManager {
+    
+    /**
+     This method will be used for getting data for a particular key.
+     - Parameter key: key is the unique key which will map to saved data.
+     - Parameter completion: completion is the callback once data is fetched.
+     */
     
     func getData(forPath path : String, withCompletion completion : @escaping (Any?) -> Void) {
         if let privateMOC = self.privateContext {
@@ -157,6 +124,13 @@ extension CoreDataManager {
         }
     }
     
+    /**
+     This method will save data w.r.t. given key value.
+     - Parameter data: data is the data which we need to save in cache.
+     - Parameter path: path is the unique key which will map to data which we are saving.
+     - Parameter completion: completion is the callback once data is saved.
+     */
+    
     func saveData(withData data : Any, forPath path : String, withCompletion completion : @escaping (Bool) -> Void) {
         if let privateMOC = self.privateContext
         {
@@ -180,6 +154,13 @@ extension CoreDataManager {
             }
         }
     }
+    
+    /**
+     This method will update data w.r.t. given key value.
+     - Parameter data: data is the data which we need to save in cache.
+     - Parameter path: path is the unique key which will map to data which we are saving.
+     - Parameter completion: completion is the callback once data is updated.
+     */
     
     func updateData(withData data : Any, forPath path : String, withCompletion completion : @escaping (Bool) -> Void) {
         if let privateMOC = self.privateContext {
@@ -228,6 +209,12 @@ extension CoreDataManager {
 // Private Method Extension
 
 extension CoreDataManager {
+    
+    /**
+     This method will save data to MOC's save method if there is any changes.
+     - Parameter completion: completion is the callback once MOC is saved.
+     */
+    
     private func saveContext(withCompletion completion : ((Bool) -> Void)?) {
         if let moc = self.privateContext {
             if moc.hasChanges {

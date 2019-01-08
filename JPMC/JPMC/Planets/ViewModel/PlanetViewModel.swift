@@ -10,7 +10,12 @@ import Foundation
 
 class PlanetViewModel {
     
-    private var dataList : [Planet]?
+    var dataList : [Planet]?
+    
+    /**
+     This method will be used for fetching planet data from "https://swapi.co/api/planets/" API end point.
+     - Parameter completion: completion is the callback once data is fetched.
+     */
     
     func getPlanetData(withCompletion completion : @escaping (Bool) -> Void) {
         PlanetManager.getPlanetData { [weak self] (list, error) in

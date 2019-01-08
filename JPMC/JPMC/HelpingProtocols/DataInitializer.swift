@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ This Protocol is to provide requirements for initializing any application object such as Planet.
+ */
+
 protocol DataInitializer {
     init(withData data : [AnyHashable : Any])
 }

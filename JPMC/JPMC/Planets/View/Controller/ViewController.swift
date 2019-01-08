@@ -14,6 +14,10 @@ class ViewController: UIViewController {
     
     let viewModel = PlanetViewModel()
     
+    /**
+     View controller's life cycle methods.
+     */
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Loading..."
@@ -40,6 +44,10 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource
 {
+    /**
+     UITableView's life cycle methods.
+     */
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.numberOfSections()
     }
@@ -63,6 +71,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
 //Private Method Extension
 
 extension ViewController {
+    
+    /**
+     This method will be notify the controller once Core Data Stack is initialized.
+     - Parameter notification: notification is the NSNotification object which contains the userinfo in which status of stack initialization is present.
+     */
+    
     @objc private func fetchTableDataAndDisplay(notification : NSNotification) {
         if let userInfo = notification.userInfo {
             if let status = userInfo["status"] as? Bool, status {

@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ This Type is used for making custom error object when any API is hit to get the data from the server.
+ */
+
 class DataError {
     
     var errorMessage = Constants.defaultErrorMessage

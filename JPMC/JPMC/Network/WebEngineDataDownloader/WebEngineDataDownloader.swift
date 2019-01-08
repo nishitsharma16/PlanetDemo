@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ This Protocol is to provide requirements for making any object as webservice manager for fetching data from server.
+ */
+
 protocol WebEngineDataDownloader {
     func createDataRequest(withPath path : String, withParam param: [AnyHashable : Any]?, withCustomHeader headers : [String : String]?, withRequestType type : RequestType, withCompletion completion : ((Any?, DataError?) -> Void)?)
 }
