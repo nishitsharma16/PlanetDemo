@@ -9,13 +9,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "JPMCTests/PlanetViewModel/PlanetViewModelTest.swift"
-            timestampString = "568637159.040082"
+            filePath = "JPMC/CoreData/CoreDataManager/CoreDataManager.swift"
+            timestampString = "568650312.859894"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "testGetPlanetData()"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
+            landmarkName = "updateData(withData:forPath:withCompletion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JPMC/CoreData/CoreDataManager/CoreDataManager.swift"
+            timestampString = "568650312.8609329"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "updateData(withData:forPath:withCompletion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

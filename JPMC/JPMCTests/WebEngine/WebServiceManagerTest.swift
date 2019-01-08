@@ -25,7 +25,7 @@ class WebServiceManagerTest: XCTestCase {
      This method will be used to test fetching data from the server for a given end point.
      */
     
-    func testGetDataForGivenKey() {
+    func testGetDataForGivenRequest() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let promise = expectation(description: "Completion handler invoked")
@@ -38,7 +38,7 @@ class WebServiceManagerTest: XCTestCase {
             promise.fulfill()
         }
         
-        waitForExpectations(timeout: 5, handler: nil)
+        waitForExpectations(timeout: 20, handler: nil)
         
         XCTAssertNotNil(dataVal, "Data not fetched.")
         XCTAssertNil(errorVal, "Data error coming \(errorVal?.errorMessage ?? "")")
